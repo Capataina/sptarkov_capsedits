@@ -1,5 +1,4 @@
 import { DependencyContainer } from "tsyringe";
-
 import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
@@ -156,6 +155,32 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
     ];
 
     therapistAssort.loyal_level_items["5fca13ca637ee0341a484f46"] = 1;
+
+    // Secure Container Alpha in Therapist
+
+    const ContainerAlpha: Item = {
+      _id: "544a11ac4bdc2d470e8b456a",
+      _tpl: "544a11ac4bdc2d470e8b456a",
+      parentId: "hideout",
+      slotId: "hideout",
+      upd: {
+        UnlimitedCount: true,
+        StackObjectsCount: 12940000,
+      },
+    };
+
+    therapistAssort.items.push(ContainerAlpha);
+
+    therapistAssort.barter_scheme["544a11ac4bdc2d470e8b456a"] = [
+      [
+        {
+          count: 1,
+          _tpl: Money.ROUBLES,
+        },
+      ],
+    ];
+
+    therapistAssort.loyal_level_items["544a11ac4bdc2d470e8b456a"] = 1;
 
     // Meds
     morphine._props.MaxHpResource = 3;

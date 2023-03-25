@@ -1,11 +1,11 @@
 {
   "name": "capsedits",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "main": "src/edits.js",
   "license": "CC",
   "author": "Capataina",
   "description": "Small edits for late game armor.",
-  "akiVersion": "3.4.*",
+  "akiVersion": "3.5.*",
   "scripts": {
     "setup": "npm i",
     "build": "node ./packageBuild.ts"
